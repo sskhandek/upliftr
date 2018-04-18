@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./code/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <style>
+    html * {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    body {
+        min-width: 420px;
+        overflow-x: hidden;
+        font-size: 12px;
+    }
+
+    input,
+    textarea {
+        width: 420px;
+    }
+
+    input#save {
+        font-weight: bold;
+        width: auto;
+    }
+    </style>
+</head>
+
+<body style="height: 500px">
+    <div id="container" style="height: 100%">
+        <div id="header" style="height: 50px; padding: 10px;  ">
+            <img src="./assets/upliftrname.png" style="height: 45px;object-fit: contain; display:block; margin:auto;" />
+        </div>
+        <div style="height: 400px">
+            <div id="mainView" style="height: 100%; display: flex; align-items: center;justify-content: center;">
+                <p>The main view</p>
+            </div>
+            <div id="userView" style="display: flex; height: 100%; align-items: center;
+  justify-content: center; padding: 32px">
+                <div>
+                    <h1 style="font-weight: bold; font-size: 24px">
+                        <br>You've been uplifted
+                         <span id="clicks" style="color: #a4defb"></span> 
+                         <span>times today!</span>
+                    </h1>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div id="header" style="height: 50px; padding-bottom: 10px">
+            <input id="mainButton" type="image" src="./assets/logo.png" style="position: absolute; left: 10px; height: 40px; width: auto" />
+            <input id="userButton" type="image" src="./assets/profile_grey.png" style="position: absolute; right: 10px; height: 40px; width: auto" />
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

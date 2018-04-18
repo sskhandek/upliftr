@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		
+		<!-- import jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		<!-- import bootstrap -->
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+		
+        <style>
+            body { 
+                min-width: 420px; 
+                overflow-x: hidden; 
+                font-family: Arial, sans-serif; 
+                font-size: 12px; 
+            }
+            input, textarea { 
+                width: 420px; 
+            }
+            input#save { 
+                font-weight: bold; width: auto; 
+            }
+        </style>
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <form id="addbookmark">
+			<p><h2>So far, you have had x good days and y bad days.</h2></p>
+			
+			<script>
+				var arr = [];
+				arr.push($('input[name=mood]:checked', '#myForm').val());
+				alert(arr.length);
+				alert(arr);
+			</script>
+			
+			
+			
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Upliftr",
+	"description": "Feel uplifted!",
+	"version": "1.0",
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"https://ajax.googleapis.com/",
+		"https://www.youtube.com/feed/trending"
+	]
+}
