@@ -6,8 +6,15 @@
 	"browser_action": {
 		"default_popup": "popup.html"
 	},
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
 	"permissions": [
 		"https://ajax.googleapis.com/",
-		"https://www.youtube.com/feed/trending"
+		"https://www.youtube.com/feed/trending",
+		"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js",
+		"https://api.giphy.com/v1/gifs/trending"
 	]
 }

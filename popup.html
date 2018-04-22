@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./code/bootstrap.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="Chart.min.js"></script>
     <style>
     html * {
         font-family: 'Nunito Sans', sans-serif;
@@ -24,6 +26,24 @@
         font-weight: bold;
         width: auto;
     }
+
+    ul {
+        text-align: center;
+    }
+
+    ul li {
+        display: block;
+    }
+
+    #loadMore {
+        position: absolute;
+        margin-top : 5px;
+        width: 40%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -32,29 +52,39 @@
         <div id="header" style="height: 50px; padding: 10px;  ">
             <img src="./assets/upliftrname.png" style="height: 45px;object-fit: contain; display:block; margin:auto;" />
         </div>
-        <div style="height: 400px">
-            <div id="mainView" style="height: 100%; display: flex; align-items: center;justify-content: center;">
-                <p>The main view</p>
+        <div style="height: 400px; padding: 20px">
+            <div id="mainView" style="height: 400px; display: flex; align-items: center;justify-content: center;overflow: scroll;">
+                <ul style="height: 400px" id='contentList'></ul>
             </div>
-            <div id="userView" style="display: flex; height: 100%; align-items: center;
-  justify-content: center; padding: 32px">
-                <div>
+            <div id="userView" style="display: flex; height: 350px; align-items: center;
+  justify-content: center;">
+                <div style="height: 350px; overflow: scroll">
                     <h1 style="font-weight: bold; font-size: 24px">
                         <br>You've been uplifted
                          <span id="clicks" style="color: #a4defb"></span> 
                          <span>times today!</span>
                     </h1>
+                    <div style="height: 225px">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div style="text-align:center">
+                        <h1 style="font-weight: bold; font-size: 24px">
+                            Content Options
+                        </h1>
+                        <p>Your GIF settings are currently searching for: </p>
+                        <input id="keyword" type="text" style="width: 60%;">
+                        <input id="btnSubmit" type="submit" value="Change" style="width: 60%;" />
+                    </div>
                 </div>
-                <div></div>
             </div>
         </div>
         <div id="header" style="height: 50px; padding-bottom: 10px">
             <input id="mainButton" type="image" src="./assets/logo.png" style="position: absolute; left: 10px; height: 40px; width: auto" />
+            <input id='loadMore' type="submit" value="Load More" />
             <input id="userButton" type="image" src="./assets/profile_grey.png" style="position: absolute; right: 10px; height: 40px; width: auto" />
         </div>
     </div>
     <!-- Scripts -->
-    <script src="jquery-3.1.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
 
